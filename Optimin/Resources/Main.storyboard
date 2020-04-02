@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nNh-wB-kWi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zmE-Zb-soC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Home-->
         <scene sceneID="IgB-4T-GEU">
@@ -78,7 +83,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Jb2-La-Fzk">
             <objects>
-                <tabBarController id="nNh-wB-kWi" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="nNh-wB-kWi" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="V6w-8e-3dK"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CjM-hn-r4U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -96,7 +101,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xuy-pd-ORa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4018.8405797101454" y="-910.04464285714278"/>
+            <point key="canvasLocation" x="4852.1739130434789" y="-972.32142857142856"/>
         </scene>
         <!--Profile-->
         <scene sceneID="6uf-22-Alj">
@@ -136,6 +141,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ldx-wh-Frh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1367" y="-183"/>
+        </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="eUU-Ox-Jbr">
+            <objects>
+                <viewController id="aLq-Z7-8mv" customClass="SplashViewController" customModule="Optimin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qlf-Xw-Wm5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="optiminLogo" translatesAutoresizingMaskIntoConstraints="NO" id="AmE-pu-Jau">
+                                <rect key="frame" x="138" y="329" width="138" height="138"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Optimin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqV-ZF-1Ed">
+                                <rect key="frame" x="16" y="491" width="382" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="MVb-co-fQc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AmE-pu-Jau" firstAttribute="centerX" secondItem="qlf-Xw-Wm5" secondAttribute="centerX" id="387-cS-lTP"/>
+                            <constraint firstItem="AmE-pu-Jau" firstAttribute="centerY" secondItem="qlf-Xw-Wm5" secondAttribute="centerY" constant="-50" id="5ha-3Y-w3c"/>
+                            <constraint firstItem="MqV-ZF-1Ed" firstAttribute="top" secondItem="AmE-pu-Jau" secondAttribute="bottom" constant="24" id="8sh-ZA-hqR"/>
+                            <constraint firstItem="6j0-sH-f7e" firstAttribute="trailing" secondItem="MqV-ZF-1Ed" secondAttribute="trailing" constant="16" id="DBH-2Y-99i"/>
+                            <constraint firstItem="MqV-ZF-1Ed" firstAttribute="leading" secondItem="6j0-sH-f7e" secondAttribute="leading" constant="16" id="uOj-Eu-qXf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6j0-sH-f7e"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fLW-7d-Fuc"/>
+                    <connections>
+                        <outlet property="optiminLogoImageView" destination="AmE-pu-Jau" id="1cB-2a-WgT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uhu-hS-dBd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2971.0144927536235" y="-972.32142857142856"/>
         </scene>
         <!--Target-->
         <scene sceneID="Pos-iq-mVt">
@@ -206,11 +251,30 @@
             </objects>
             <point key="canvasLocation" x="4877" y="-183"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="R1a-CE-MoS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zmE-Zb-soC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pdo-6v-JMG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aLq-Z7-8mv" kind="relationship" relationship="rootViewController" id="MRy-pP-x52"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yKn-3N-POi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2060.8695652173915" y="-972.32142857142856"/>
+        </scene>
     </scenes>
     <resources>
         <image name="house" catalog="system" width="64" height="54"/>
         <image name="iconInspiration" width="18" height="27"/>
         <image name="iconTarget" width="24" height="24"/>
+        <image name="optiminLogo" width="138" height="138"/>
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
 </document>
